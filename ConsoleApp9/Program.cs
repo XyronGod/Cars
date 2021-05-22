@@ -6,10 +6,11 @@ namespace ConsoleApp9
 	{
 		static void Main(string[] args)
 		{
-			Легковая a = new Легковая("Reno Sandero Stepway", "Red", "4");
-			Грузовая b = new Грузовая("KAMAZ", "Black angus", "39T");
-			Военная c = new Военная("T-62a", "79km", "107K");
-			ЧеловекМашина d = new ЧеловекМашина("T1000", "189cm", "250kg");
+			Легковая a = new Легковая("Reno Sandero Stepway", 5, "Red", "Купе");
+			Грузовая b = new Грузовая("KAMAZ", 6, "Blue", "Деда");
+			Военная c = new Военная("T-62a", 14, "Green", "Шишига");
+			ЧеловекМашина d = new ЧеловекМашина("T1000", 4, "Black", "Терминатор");
+			СпортКар e = new СпортКар("Viper", 5, "White", "спорт");
 			a.On("");
 			a.ValitBokom("");
 			a.Off("");
@@ -35,6 +36,12 @@ namespace ConsoleApp9
 			d.Reload("");
 			d.Off("");
 			Console.WriteLine("");
+
+			e.On("");
+			e.Razgon("");
+			e.Fire("");
+			e.Reload("");
+			e.Off("");
 		}
 	}
 }

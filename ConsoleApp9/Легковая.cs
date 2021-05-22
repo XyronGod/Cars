@@ -4,33 +4,16 @@ using System.Text;
 
 namespace ConsoleApp9
 {
-	class Легковая
+	class Легковая : Транспорт
 	{
-		public string name;
-		public string color;
-		public string age;
 
-		public Легковая (string v1, string v2, string v3)
+		public Легковая(string name, int age, string color, string kuzov) : base(name, kuzov, color, age)
 		{
-			V1 = v1;
-			V2 = v1;
-			V3 = v1;
-		}
-		public string V1 { get; }
-		public string V2 { get; }
-		public string V3 { get; }
 
-		internal void On(string v)
-		{
-			Console.WriteLine(V1 + " : Машина заведена" + v);
 		}
-		internal void Off(string v)
+		internal void ValitBokom(string a)
 		{
-			Console.WriteLine(V1 + " : Машина заглушена" + v);
-		}
-		internal void ValitBokom(string v)
-		{
-			Console.WriteLine(V1 + " : Машина ValitBokom" + v);
+			Console.WriteLine(Name + " : Машина ValitBokom");
 		}
 	}
 

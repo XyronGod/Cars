@@ -4,41 +4,24 @@ using System.Text;
 
 namespace ConsoleApp9
 {
-	class ЧеловекМашина
+	class ЧеловекМашина : Транспорт
 	{
-		public string name;
-		public string Height;
-		public string Weight;
+		public ЧеловекМашина(string name, int age, string color, string kuzov) : base(name, kuzov, color, age)
+		{
+		}
 
-		public ЧеловекМашина(string v1, string v2, string v3)
-		{
-			V1 = v1;
-			V2 = v1;
-			V3 = v1;
-		}
-		public string V1 { get; }
-		public string V2 { get; }
-		public string V3 { get; }
 
-		internal void On(string v)
+		internal void KillallPeople(string d)
 		{
-			Console.WriteLine(V1 + " : Машина включена" + v);
+			Console.WriteLine(Name + " : Машина убивает всех людей");
 		}
-		internal void Off(string v)
+		internal void Fire(string d)
 		{
-			Console.WriteLine(V1 + " : Машина выключена" + v);
+			Console.WriteLine(Name + " : Машина стреляет");
 		}
-		internal void KillallPeople(string v)
+		internal void Reload(string d)
 		{
-			Console.WriteLine(V1 + " : Машина убивает всех людей" + v);
-		}
-		internal void Fire(string v)
-		{
-			Console.WriteLine(V1 + " : Машина стреляет" + v);
-		}
-		internal void Reload(string v)
-		{
-			Console.WriteLine(V1 + " : Машина перезаряжается" + v);
+			Console.WriteLine(Name + " : Машина перезаряжается");
 		}
 	}
 }
